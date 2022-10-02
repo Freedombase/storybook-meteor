@@ -10,7 +10,7 @@ addons.register(ADDON_ID, () => {
   // Register the tool
   addons.add(TOOL_ID, {
     type: types.TOOL,
-    title: "My addon",
+    title: "Meteor",
     match: ({ viewMode }) => !!(viewMode && viewMode.match(/^(story|docs)$/)),
     render: Tool,
   });
@@ -18,7 +18,7 @@ addons.register(ADDON_ID, () => {
   // Register the panel
   addons.add(PANEL_ID, {
     type: types.PANEL,
-    title: "My addon",
+    title: "Meteor",
     match: ({ viewMode }) => viewMode === "story",
     render: Panel,
   });
@@ -26,11 +26,11 @@ addons.register(ADDON_ID, () => {
   // Register the tab
   addons.add(TAB_ID, {
     type: types.TAB,
-    title: "My addon",
+    title: "Meteor",
     //👇 Checks the current route for the story
-    route: ({ storyId }) => `/myaddon/${storyId}`,
+    route: ({ storyId }) => `/meteor/${storyId}`,
     //👇 Shows the Tab UI element in myaddon view mode
-    match: ({ viewMode }) => viewMode === "myaddon",
+    match: ({ viewMode }) => viewMode === "meteor",
     render: Tab,
   });
 });
